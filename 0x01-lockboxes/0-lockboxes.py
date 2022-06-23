@@ -18,7 +18,7 @@ def canUnlockAll(boxes):
     i = 0
     for box_num in range(0, num_boxes):
         box_array.append(box_num)
-    #print("box array = {}".format(box_array))
+
     while i < num_boxes:
         box += 1
         for key_num in boxes[i]:
@@ -28,16 +28,11 @@ def canUnlockAll(boxes):
                 for k in boxes[key_num]:
                     if k not in key_array:
                         key_array.append(k)
-        #print("Key_array in iteration {}: {}".format(i, key_array))
         for key in key_array:
             if key == box:
                 if box in box_array:
                     box_array.remove(box)
-                    #print("Box removed is: {}".format(box))
                     break
-                #else:
-                    #print("Box {} not in box_array and not removed".format(box))
-        #print("box_array after iteration {}: {}".format(i, box_array))
         i += 1
         if len(box_array) == 1:
             return True
