@@ -11,6 +11,7 @@ print_list = list(range(10, 10001, 10))
 
 
 def print_stats(size, codes):
+    """ Prints the statistics """
     print("File size: {}".format(sum(size_list)))
     for code in sorted(code_dict.keys()):
         if code_dict[code] > 0:
