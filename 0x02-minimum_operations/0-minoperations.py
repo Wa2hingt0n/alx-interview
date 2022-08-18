@@ -7,7 +7,7 @@ def minOperations(n):
     """ Calculates the fewest number of operations needed to result in exactly
     'n' 'H' characters in the file
     """
-    if n == 0 or n == 1:
+    if n <= 0 or n == 1:
         return 0
     prime_factors = []
     num = n
