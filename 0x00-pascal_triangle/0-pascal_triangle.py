@@ -16,7 +16,7 @@ def pascal_triangle(n):
         coeff_list = []
         for j in range(1, i+1):
             coeff_list.append(c)
-            c = int(c * (i - j) / j)
+            c = (c * (i - j) // j)
         triangle_list.append(coeff_list)
 
     return triangle_list
